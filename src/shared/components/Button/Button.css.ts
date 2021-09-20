@@ -1,7 +1,7 @@
 import { theme } from "@shared/styles/Theme.css";
 import { style } from "@vanilla-extract/css";
 
-export const button = style({
+export const buttonClass = style({
   display: "flex",
   backgroundColor: theme.color.purpleHaze,
   color: theme.color.charcoal,

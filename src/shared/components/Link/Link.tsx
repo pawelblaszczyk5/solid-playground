@@ -1,7 +1,7 @@
 import type { Component } from "solid-js";
 
 import { Link as RouterLink } from "solid-app-router";
-import { link } from "./Link.css";
+import { linkClass } from "./Link.css";
 
 interface LinkProps {
   href: string;
@@ -9,7 +9,7 @@ interface LinkProps {
 
 export const Link: Component<LinkProps> = (props) => {
   return (
-    <RouterLink class={link} href={props.href}>
+    <RouterLink class={linkClass} href={props.href}>
       {props.children ?? "Link"}
     </RouterLink>
   );

@@ -8,4 +8,12 @@ export default defineConfig({
     target: "esnext",
     polyfillDynamicImport: false,
   },
+  resolve: {
+    alias: {
+      "@shared": "/src/shared",
+      "@home": "/src/modules/home",
+      "@testA": "/src/modules/testA",
+      "@testB": "/src/modules/testB",
+    },
+  },
 });

@@ -9,6 +9,12 @@
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
     "types": ["vite/client"],
-    "importsNotUsedAsValues": "error"
+    "importsNotUsedAsValues": "error",
+    "paths": {
+      "@shared/*": ["./src/shared/*"],
+      "@home/*": ["./src/modules/home/*"],
+      "@testA/*": ["./src/modules/testA/*"],
+      "@testB/*": ["./src/modules/testB/*"]
+    }
   }
 }

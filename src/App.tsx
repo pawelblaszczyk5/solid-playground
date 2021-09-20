@@ -1,6 +1,8 @@
-import { RouteDefinition, useRoutes } from "solid-app-router";
-import { Component, lazy } from "solid-js";
+import type { RouteDefinition } from "solid-app-router";
+import type { Component } from "solid-js";
 
+import { useRoutes } from "solid-app-router";
+import { lazy } from "solid-js";
 import { heading, nav } from "./App.css";
 import { Link } from "@shared/components/Link/Link";
 

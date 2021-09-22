@@ -32,10 +32,16 @@ jobs:
       - name: Run tests with coverage
         run: npm run test:coverage
 
+      - name: Upload code coverage to GitHub
+        uses: actions/upload-artifact@27121b0bdffd731efa15d66772be8dc71245d074
+        with:
+          name: code-coverage
+          path: code/coverage/lcov.info
+
       - name: Download previous code coverage
         uses: actions/download-artifact@v2
         with:
-          name: code-coverage-report
+          name: code-coverage
           path: coverage
 
       - name: Report code coverage
@@ -43,5 +49,5 @@ jobs:
         with:
           coverage-files: coverage/lcov.info
           minimum-coverage: 90
-          artifact-name: code-coverage-report
+          artifact-name: code-coverage
           github-token: ${{ secrets.GITHUB_TOKEN }}

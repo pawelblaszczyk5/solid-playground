@@ -36,7 +36,16 @@ jobs:
         uses: actions/upload-artifact@27121b0bdffd731efa15d66772be8dc71245d074
         with:
           name: code-coverage
-          path: code/coverage/lcov.info
+          path: code/coverage/lcov.info}
+
+  coverage_report:
+    name: Generate coverage report
+    needs: tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
       - name: Download previous code coverage
         uses: actions/download-artifact@v2
@@ -50,4 +59,4 @@ jobs:
           coverage-files: coverage/lcov.info
           minimum-coverage: 90
           artifact-name: code-coverage
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }

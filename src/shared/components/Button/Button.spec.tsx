@@ -7,9 +7,8 @@ const setup = () => {
   return render(() => <Button onClick={clickFunction} />);
 };
 
-test('hehehe', () => {
+test('Example test', () => {
   setup();
-  const x = screen.getByRole('button');
-  console.log(x);
-  expect(true).toEqual(true);
+
+  expect(screen.getByRole('header')).toBeInTheDocument();
 });

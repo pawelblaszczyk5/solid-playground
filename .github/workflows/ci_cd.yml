@@ -36,7 +36,7 @@ jobs:
         uses: actions/upload-artifact@27121b0bdffd731efa15d66772be8dc71245d074
         with:
           name: code-coverage
-          path: code/coverage/lcov.info}
+          path: code/coverage/lcov.info
 
   coverage_report:
     name: Generate coverage report

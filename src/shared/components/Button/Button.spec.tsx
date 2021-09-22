@@ -1,19 +1,13 @@
 import { render, screen } from 'solid-testing-library';
 import { Button } from './Button';
 
-const setup = () => {
-  const clickFunction = jest.fn();
+test('Button should have default text', () => {
+  render(() => <Button onClick={() => {}} />);
 
-  return render(() => <Button onClick={clickFunction} />);
-};
-
-test('Example test', () => {
-  setup();
-
-  expect(screen.getByRole('button')).toBeInTheDocument();
+  expect(screen.getByRole('button', { name: 'Click me' })).toBeInTheDocument();
 });
 
-test('Improve coverage', () => {
+test('Button text should be customizable', () => {
   render(() => <Button onClick={() => {}}>Test</Button>);
 
   expect(screen.getByRole('button', { name: 'Test' })).toBeInTheDocument();

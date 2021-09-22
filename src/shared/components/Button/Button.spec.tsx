@@ -10,5 +10,5 @@ const setup = () => {
 test('Example test', () => {
   setup();
 
-  expect(screen.getByRole('header')).toBeInTheDocument();
+  expect(screen.getByRole('button')).toBeInTheDocument();
 });

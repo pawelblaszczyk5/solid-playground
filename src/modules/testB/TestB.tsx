@@ -1,7 +1,5 @@
-import type { Component } from "solid-js";
+import type { Component } from 'solid-js';
 
-const TestB: Component = () => {
-  return <h1>Test B</h1>;
-};
+const TestB: Component = () => <h1>Test B</h1>;
 
 export default TestB;

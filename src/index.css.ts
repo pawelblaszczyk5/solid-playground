@@ -1,19 +1,19 @@
-import { theme } from "@shared/styles/Theme.css";
-import { globalStyle } from "@vanilla-extract/css";
+import { theme } from '@shared/styles/Theme.css';
+import { globalStyle } from '@vanilla-extract/css';
 
-globalStyle("*", {
+globalStyle('*', {
   margin: 0,
   padding: 0,
-  boxSizing: "border-box",
+  boxSizing: 'border-box',
 });
 
-globalStyle("*:focus", {
+globalStyle('*:focus', {
   outlineColor: theme.color.violet,
-  outlineStyle: "dashed",
-  outlineWidth: "2px",
+  outlineStyle: 'dashed',
+  outlineWidth: '2px',
 });
 
-globalStyle("body", {
+globalStyle('body', {
   backgroundColor: theme.color.charcoal,
   padding: theme.spacing.medium,
 });

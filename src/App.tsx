@@ -1,24 +1,24 @@
-import type { RouteDefinition } from "solid-app-router";
-import type { Component } from "solid-js";
+import type { RouteDefinition } from 'solid-app-router';
+import type { Component } from 'solid-js';
 
-import { useRoutes } from "solid-app-router";
-import { lazy } from "solid-js";
-import { heading, nav } from "./App.css";
-import { Link } from "@shared/components/Link/Link";
+import { useRoutes } from 'solid-app-router';
+import { lazy } from 'solid-js';
+import { Link } from '@shared/components/Link/Link';
+import { heading, nav } from './App.css';
 
 export const App: Component = () => {
   const routes: Array<RouteDefinition> = [
     {
-      path: "/",
-      component: lazy(() => import("./modules/home/Home")),
+      path: '/',
+      component: lazy(() => import('./modules/home/Home')),
     },
     {
-      path: "/testA",
-      component: lazy(() => import("./modules/testA/TestA")),
+      path: '/testA',
+      component: lazy(() => import('./modules/testA/TestA')),
     },
     {
-      path: "/testB",
-      component: lazy(() => import("./modules/testB/TestB")),
+      path: '/testB',
+      component: lazy(() => import('./modules/testB/TestB')),
     },
   ];
   const Routes = useRoutes(routes);

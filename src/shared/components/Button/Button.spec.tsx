@@ -12,3 +12,9 @@ test('Example test', () => {
 
   expect(screen.getByRole('button')).toBeInTheDocument();
 });
+
+test('Improve coverage', () => {
+  render(() => <Button onClick={() => {}}>Test</Button>);
+
+  expect(screen.getByRole('button', { name: 'Test' })).toBeInTheDocument();
+});

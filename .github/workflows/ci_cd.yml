@@ -33,10 +33,8 @@ jobs:
         run: npm run test:coverage
 
       - name: Report code coverage
-        uses: zgosalvez/github-actions-report-lcov@v1
+        uses: zgosalvez/github-actions-report-lcov@v1.3.2
         with:
           coverage-files: coverage/lcov.info
           minimum-coverage: 90
-          artifact-name: code-coverage-report
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          working-directory: apps/my-first-app

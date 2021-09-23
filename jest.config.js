@@ -12,6 +12,7 @@ module.exports = {
   },
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'],
+  collectCoverageFrom: ['src/**/*.ts', 'src/**/*.tsx'],
   moduleNameMapper: {
     'solid-js/web': '<rootDir>/node_modules/solid-js/web/dist/web.cjs',
     'solid-js': '<rootDir>/node_modules/solid-js/dist/solid.cjs',

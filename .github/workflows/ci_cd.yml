@@ -1,6 +1,6 @@
 # This workflow will do a clean install of node dependencies, cache/restore them, build application and run tests
 
-name: Tests
+name: CI/CD
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
     branches: [main]
 
 jobs:
-  tests:
+  ci_cd:
     runs-on: ubuntu-latest
 
     strategy:

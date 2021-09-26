@@ -39,3 +39,9 @@ jobs:
         uses: codecov/codecov-action@v2
         with:
           files: coverage/lcov.info
+
+      - name: Lint code
+        run: npm run lint
+
+      - name: Check code style with prettier
+        run: npm run format

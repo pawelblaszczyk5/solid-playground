@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "lint": "eslint --ext .ts,.tsx \"./src/**\"",
+    "lint": "eslint --ext .ts,.tsx \"./src/**\" --max-warnings 0",
     "format": "prettier --check \"./src/**\"",
     "test": "jest",
     "test:coverage": "jest --coverage"

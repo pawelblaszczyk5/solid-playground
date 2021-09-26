@@ -8,9 +8,13 @@
     "build": "vite build",
     "serve": "vite preview",
     "lint": "eslint --ext .ts,.tsx \"./src/**\"",
+    "lint:ci": "eslint --ext .ts,.tsx \"./src/**\" --max-warnings 0",
+    "lint:fix": "eslint --fix --ext .ts,.tsx \"./src/**\"",
     "format": "prettier --check \"./src/**\"",
+    "format:fix": "prettier --write --check \"./src/**\"",
     "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "prepare": "husky install"
   },
   "license": "MIT",
   "devDependencies": {
@@ -28,6 +32,7 @@
     "eslint-plugin-react": "^7.26.0",
     "eslint-plugin-solid": "^0.1.2",
     "eslint-plugin-testing-library": "^4.12.3",
+    "husky": "^7.0.0",
     "jest": "^27.2.1",
     "prettier": "^2.4.1",
     "solid-jest": "^0.2.0",

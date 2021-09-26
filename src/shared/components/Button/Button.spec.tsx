@@ -1,10 +1,6 @@
 import { render, screen } from 'solid-testing-library';
 import { Button } from './Button';
 
-
-
-
-
 test('Button should have default text haha', () => {
   render(() => <Button onClick={() => {}} />);
 

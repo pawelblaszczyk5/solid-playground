@@ -1,1 +1,3 @@
 # Solid Playground
+
+Playground for learning and testing SolidJS, GitHub workflows...
